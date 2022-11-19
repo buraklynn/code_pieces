@@ -1,20 +1,5 @@
 
-
-# print("Sorting Methods")
-
-
-def find_min(liste):
-    for i in range(len(liste)-1):
-        mint = liste[i]
-        for n in range(len(liste)):
-            if mint < liste[n]:
-                continue
-            else:
-                mint = liste[n]
-                continue
-    return mint
-
-
+# Find min
 def minnum(listex):
     minx = listex[0]
     for i in range(len(listex)-1):
@@ -23,6 +8,7 @@ def minnum(listex):
     return minx
 
 
+# Bubble sort
 def bubble_sort(liste):
     liste_len = len(liste)
     for i in range(liste_len):
@@ -32,6 +18,7 @@ def bubble_sort(liste):
     return liste
 
 
+# Sorting
 def sortingx(liste):
     for k in range(len(liste)):
         for i in range(len(liste)-1):
@@ -40,6 +27,7 @@ def sortingx(liste):
     return liste
 
 
+# Insertion sort
 def insertion_sort(liste):
     nlist = list()
     for i in range(len(liste)):
@@ -53,31 +41,4 @@ def insertion_sort(liste):
                     continue
         print(nlist)
     return nlist
-
-
-
-# Roma rakamlarını sayıya çevirme
-def RomantoInt():
-    romans = ("I", "V", "X", "L", "C", "D", "M")
-    ints = (1, 5, 10, 50, 100, 500, 1000)
-
-    thenum = input("Enter Roman Number: ").upper()
-    a = list()
-    for i in thenum:
-        i = ints[romans.index(i)]
-        a.append(i)
-    c = 0
-    if len(a) == 1:
-        print(a[0])
-    else:
-        for t in a:
-            if a.index(t)+1 != len(a):
-                if t < a[a.index(t)+1]:
-                    t *= -1
-            c += t
-        if c <= 3999:
-            print(c)
-        else:
-            print("Geçerli bir sayı girin.")
-
 
